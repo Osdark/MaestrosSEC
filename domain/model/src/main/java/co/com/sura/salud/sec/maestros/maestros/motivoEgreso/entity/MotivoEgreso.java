@@ -1,4 +1,4 @@
-package co.com.sura.salud.sec.maestros.maestros.motivoEgreso;
+package co.com.sura.salud.sec.maestros.maestros.motivoEgreso.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,5 +13,4 @@ public class MotivoEgreso {
     private String id;
     private String idMotivo;
     private String descripcion;
-
 }

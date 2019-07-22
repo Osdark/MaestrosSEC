@@ -1,12 +1,14 @@
-package co.com.sura.salud.sec.maestros.maestros.municipio;
+package co.com.sura.salud.sec.maestros.maestros.municipio.entity;
 
-public interface MunicipioFactory {
+import generic.GenerateUniqueId;
+
+public interface MunicipioFactory extends GenerateUniqueId {
 
     default Municipio crearMunicipio(
-            String id, String nombre, String idCiudad, String idMunicipio, double longitud, double latitud
+            String nombre, String idCiudad, String idMunicipio, double longitud, double latitud
     ) {
         return Municipio.builder()
-                .id(id)
+                .id(generateObjectId())
                 .nombre(nombre)
                 .idCiudad(idCiudad)
                 .idMunicipio(idMunicipio)

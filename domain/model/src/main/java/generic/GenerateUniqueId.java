@@ -1,4 +1,4 @@
-package co.com.sura.salud.sec.generic;
+package generic;
 
 import java.util.UUID;
 

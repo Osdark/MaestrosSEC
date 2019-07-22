@@ -1,11 +1,14 @@
-package co.com.sura.salud.sec.maestros.maestros.tipoNutricion;
+package co.com.sura.salud.sec.maestros.maestros.tipoNutricion.entity;
 
-public interface TipoNutricionFactory {
+import generic.GenerateUniqueId;
+
+public interface TipoNutricionFactory extends GenerateUniqueId {
 
     default TipoNutricion crearTipoNutricion(
             String tipo, String idTipo, String idNutricion, String descripcion
     ) {
         return TipoNutricion.builder()
+                .id(generateObjectId())
                 .tipo(tipo)
                 .idTipo(idTipo)
                 .idNutricion(idNutricion)

@@ -1,12 +1,14 @@
-package co.com.sura.salud.sec.maestros.maestros.viaAdministracion;
+package co.com.sura.salud.sec.maestros.maestros.viaAdministracion.entity;
 
-public interface ViaAdministracionFactory {
+import generic.GenerateUniqueId;
+
+public interface ViaAdministracionFactory extends GenerateUniqueId {
 
     default ViaAdministracion crearViaAdministracion(
-            String id, String idViaAdministracion, String tipo, String descripcion
+            String idViaAdministracion, String tipo, String descripcion
     ) {
         return ViaAdministracion.builder()
-                .id(id)
+                .id(generateObjectId())
                 .idViaAdministracion(idViaAdministracion)
                 .tipo(tipo)
                 .descripcion(descripcion)

@@ -1,18 +1,19 @@
-package co.com.sura.salud.sec.maestros.maestros.eventoSoporteNutricional;
+package co.com.sura.salud.sec.maestros.maestros.eventoSoporteNutricional.entity;
 
-import co.com.sura.salud.sec.maestros.maestros.frecuencia.Frecuencia;
-import co.com.sura.salud.sec.maestros.maestros.tipoSoporteNutricional.TipoSoporteNutricional;
+import co.com.sura.salud.sec.maestros.maestros.frecuencia.entity.Frecuencia;
+import co.com.sura.salud.sec.maestros.maestros.tipoSoporteNutricional.entity.TipoSoporteNutricional;
+import generic.GenerateUniqueId;
 
 import java.util.ArrayList;
 
-public interface EventoSoporteNutricionalFactory {
+public interface EventoSoporteNutricionalFactory extends GenerateUniqueId {
 
     default EventoSoporteNutricional crearEventoSoporteNutricional(
-            String id, Frecuencia frecuencia, TipoSoporteNutricional tipoEvento, ArrayList<Object> diasEvento,
+            Frecuencia frecuencia, TipoSoporteNutricional tipoEvento, ArrayList<Object> diasEvento,
             Integer diasTratamiento
     ) {
         return EventoSoporteNutricional.builder()
-                .id(id)
+                .id(generateObjectId())
                 .frecuencia(frecuencia)
                 .tipoEvento(tipoEvento)
                 .diasEvento(diasEvento)

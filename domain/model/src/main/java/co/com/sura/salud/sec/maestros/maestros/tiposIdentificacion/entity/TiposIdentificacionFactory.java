@@ -1,12 +1,14 @@
-package co.com.sura.salud.sec.maestros.maestros.tiposIdentificacion;
+package co.com.sura.salud.sec.maestros.maestros.tiposIdentificacion.entity;
 
-public interface TiposIdentificacionFactory {
+import generic.GenerateUniqueId;
+
+public interface TiposIdentificacionFactory extends GenerateUniqueId {
 
     default TiposIdentificacion crearTiposIdentificacion(
-            String id, String idTipo, String nombre, String codigoPos, String codigoSura
+            String idTipo, String nombre, String codigoPos, String codigoSura
     ) {
         return TiposIdentificacion.builder()
-                .id(id)
+                .id(generateObjectId())
                 .idTipo(idTipo)
                 .nombre(nombre)
                 .codigoPos(codigoPos)

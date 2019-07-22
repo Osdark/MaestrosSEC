@@ -1,12 +1,14 @@
-package co.com.sura.salud.sec.maestros.maestros.motivoEgreso;
+package co.com.sura.salud.sec.maestros.maestros.motivoEgreso.entity;
 
-public interface MotivoEgresoFactory {
+import generic.GenerateUniqueId;
+
+public interface MotivoEgresoFactory extends GenerateUniqueId {
 
     default MotivoEgreso crearMotivoEgreso(
-            String id, String idMotivo, String descripcion
+            String idMotivo, String descripcion
     ) {
         return MotivoEgreso.builder()
-                .id(id)
+                .id(generateObjectId())
                 .idMotivo(idMotivo)
                 .descripcion(descripcion)
                 .build();

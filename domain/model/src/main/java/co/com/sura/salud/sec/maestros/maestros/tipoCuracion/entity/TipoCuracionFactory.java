@@ -1,12 +1,14 @@
-package co.com.sura.salud.sec.maestros.maestros.tipoCuracion;
+package co.com.sura.salud.sec.maestros.maestros.tipoCuracion.entity;
 
-public interface TipoCuracionFactory {
+import generic.GenerateUniqueId;
+
+public interface TipoCuracionFactory extends GenerateUniqueId {
 
     default TipoCuracion crearTipoCuracion(
-            String id, String idTipoCutracion, String descripcion
+            String idTipoCutracion, String descripcion
     ) {
         return TipoCuracion.builder()
-                .id(id)
+                .id(generateObjectId())
                 .idTipoCuracion(idTipoCutracion)
                 .descripcion(descripcion)
                 .build();

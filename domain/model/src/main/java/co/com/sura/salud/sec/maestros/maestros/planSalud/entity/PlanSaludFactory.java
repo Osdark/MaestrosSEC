@@ -1,12 +1,14 @@
-package co.com.sura.salud.sec.maestros.maestros.planSalud;
+package co.com.sura.salud.sec.maestros.maestros.planSalud.entity;
 
-public interface PlanSaludFactory {
+import generic.GenerateUniqueId;
+
+public interface PlanSaludFactory extends GenerateUniqueId {
 
     default PlanSalud crearPlanSalud(
-            String id, String nombre, String nombreAseguradora, String idPlan
+            String nombre, String nombreAseguradora, String idPlan
     ) {
         return PlanSalud.builder()
-                .id(id)
+                .id(generateObjectId())
                 .nombre(nombre)
                 .nombreAseguradora(nombreAseguradora)
                 .idPlan(idPlan)

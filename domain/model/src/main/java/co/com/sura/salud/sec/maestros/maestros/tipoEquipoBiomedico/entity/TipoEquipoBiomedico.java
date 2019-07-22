@@ -1,4 +1,4 @@
-package co.com.sura.salud.sec.maestros.maestros.tipoEquipoBiomedico;
+package co.com.sura.salud.sec.maestros.maestros.tipoEquipoBiomedico.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,12 +1,14 @@
-package co.com.sura.salud.sec.maestros.maestros.dosis;
+package co.com.sura.salud.sec.maestros.maestros.dosis.entity;
 
-public interface DosisFactory {
+import generic.GenerateUniqueId;
+
+public interface DosisFactory extends GenerateUniqueId {
 
     default Dosis crearDosis(
-            String id, String idDosis, String tipo, String descripcion
+            String idDosis, String tipo, String descripcion
     ) {
         return Dosis.builder()
-                .id(id)
+                .id(generateObjectId())
                 .idDosis(idDosis)
                 .tipo(tipo)
                 .descripcion(descripcion)

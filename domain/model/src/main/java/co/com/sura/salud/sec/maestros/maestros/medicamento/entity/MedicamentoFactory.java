@@ -1,12 +1,14 @@
-package co.com.sura.salud.sec.maestros.maestros.medicamento;
+package co.com.sura.salud.sec.maestros.maestros.medicamento.entity;
 
-public interface MedicamentoFactory {
+import generic.GenerateUniqueId;
+
+public interface MedicamentoFactory extends GenerateUniqueId {
 
     default Medicamento crearMedicamento(
-            String id, String idMedicamento, String nombre, String presentacion, String codigoMedicamento
+            String idMedicamento, String nombre, String presentacion, String codigoMedicamento
     ) {
         return Medicamento.builder()
-                .id(id)
+                .id(generateObjectId())
                 .idMedicamento(idMedicamento)
                 .nombre(nombre)
                 .presentacion(presentacion)

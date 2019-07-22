@@ -1,4 +1,4 @@
-package co.com.sura.salud.sec.maestros.maestros.novedadesPorTipoAdmision;
+package co.com.sura.salud.sec.maestros.maestros.novedadesPorTipoAdmision.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,6 +12,7 @@ import java.util.List;
 @AllArgsConstructor
 @Builder(toBuilder = true)
 public class NovedadesPorTipoAdmision {
+    private String id;
     private String tipoAtencion;
     private String codigoPiso;
     private Boolean enviarProgramacion;

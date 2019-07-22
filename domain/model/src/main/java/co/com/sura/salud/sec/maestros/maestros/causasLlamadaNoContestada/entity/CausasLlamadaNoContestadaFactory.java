@@ -1,12 +1,14 @@
-package co.com.sura.salud.sec.maestros.maestros.causasLlamadaNoContestada;
+package co.com.sura.salud.sec.maestros.maestros.causasLlamadaNoContestada.entity;
 
-public interface CausasLlamadaNoContestadaFactory {
+import generic.GenerateUniqueId;
 
-    default CausasLlamadaNoContestada crearCausaLlamadaNoContestada(
-        String id, String idCausa, String nombreCausa
+public interface CausasLlamadaNoContestadaFactory extends GenerateUniqueId {
+
+    default CausasLlamadaNoContestada crearCausaLlamadaNoContestada (
+        String idCausa, String nombreCausa
     ) {
         return CausasLlamadaNoContestada.builder()
-                .id(id)
+                .id(generateObjectId())
                 .idCausa(idCausa)
                 .nombreCausa(nombreCausa)
                 .build();

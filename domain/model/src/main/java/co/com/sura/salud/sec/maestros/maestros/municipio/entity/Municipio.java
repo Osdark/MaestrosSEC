@@ -1,4 +1,4 @@
-package co.com.sura.salud.sec.maestros.maestros.municipio;
+package co.com.sura.salud.sec.maestros.maestros.municipio.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,4 +1,4 @@
-package co.com.sura.salud.sec.maestros.maestros.proveedor;
+package co.com.sura.salud.sec.maestros.maestros.proveedor.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder(toBuilder = true)
 public class Proveedor {
+    private String id;
     private String idProveedor;
     private String descripcion;
 }

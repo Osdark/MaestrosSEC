@@ -1,12 +1,14 @@
-package co.com.sura.salud.sec.maestros.maestros.centroEstadiaTemporal;
+package co.com.sura.salud.sec.maestros.maestros.centroEstadiaTemporal.entity;
 
-public interface CentroEstadiaTemporalFactory {
+import generic.GenerateUniqueId;
+
+public interface CentroEstadiaTemporalFactory extends GenerateUniqueId {
 
     default CentroEstadiaTemporal crearCentroEstadiaTemporal(
-            String id, String idCiudad, String nombre
+            String idCiudad, String nombre
     ) {
         return CentroEstadiaTemporal.builder()
-                .id(id)
+                .id(generateObjectId())
                 .idCiudad(idCiudad)
                 .nombre(nombre)
                 .build();

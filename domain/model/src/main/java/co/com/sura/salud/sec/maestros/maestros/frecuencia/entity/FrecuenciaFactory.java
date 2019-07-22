@@ -1,12 +1,14 @@
-package co.com.sura.salud.sec.maestros.maestros.frecuencia;
+package co.com.sura.salud.sec.maestros.maestros.frecuencia.entity;
 
-public interface FrecuenciaFactory {
+import generic.GenerateUniqueId;
+
+public interface FrecuenciaFactory extends GenerateUniqueId {
 
     default Frecuencia crearFrecuencia(
-            String id, String idFrecuencia, String tipo, String descripcion
+            String idFrecuencia, String tipo, String descripcion
     ) {
         return Frecuencia.builder()
-                .id(id)
+                .id(generateObjectId())
                 .idFrecuencia(idFrecuencia)
                 .tipo(tipo)
                 .descripcion(descripcion)

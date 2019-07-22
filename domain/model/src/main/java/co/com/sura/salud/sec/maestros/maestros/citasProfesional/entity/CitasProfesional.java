@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder(toBuilder = true)
 public class CitasProfesional {
+    private String id;
     private String idCita;
     private String tipoCita;
 }

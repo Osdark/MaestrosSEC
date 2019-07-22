@@ -1,12 +1,14 @@
-package co.com.sura.salud.sec.maestros.maestros.estadoPaciente;
+package co.com.sura.salud.sec.maestros.maestros.estadoPaciente.entity;
 
-public interface EstadoPacienteFactory {
+import generic.GenerateUniqueId;
+
+public interface EstadoPacienteFactory extends GenerateUniqueId {
 
     default EstadoPaciente crearEstadoPaciente(
-            String id, String nombre
+            String nombre
     ) {
         return EstadoPaciente.builder()
-                .id(id)
+                .id(generateObjectId())
                 .nombre(nombre)
                 .build();
     }

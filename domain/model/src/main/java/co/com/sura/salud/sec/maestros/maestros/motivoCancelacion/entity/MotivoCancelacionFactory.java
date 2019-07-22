@@ -1,12 +1,14 @@
-package co.com.sura.salud.sec.maestros.maestros.motivoCancelacion;
+package co.com.sura.salud.sec.maestros.maestros.motivoCancelacion.entity;
 
-public interface MotivoCancelacionFactory {
+import generic.GenerateUniqueId;
+
+public interface MotivoCancelacionFactory extends GenerateUniqueId {
 
     default MotivoCancelacion crearMotivoCancelacion(
-            String id, String idMotivo, String descripcion
+            String idMotivo, String descripcion
     ) {
         return MotivoCancelacion.builder()
-                .id(id)
+                .id(generateObjectId())
                 .idMotivo(idMotivo)
                 .descripcion(descripcion)
                 .build();

@@ -1,4 +1,4 @@
-package co.com.sura.maestros.mapper;
+package co.com.sura.salud.sec.maestros.mapper;
 
 import org.modelmapper.internal.util.Strings;
 import org.modelmapper.spi.NameTransformer;

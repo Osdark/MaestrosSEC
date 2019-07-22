@@ -1,14 +1,16 @@
-package co.com.sura.salud.sec.maestros.maestros.tipoEquipoBiomedico;
+package co.com.sura.salud.sec.maestros.maestros.tipoEquipoBiomedico.entity;
+
+import generic.GenerateUniqueId;
 
 import java.util.List;
 
-public interface TipoEquipoBiomedicoFactory {
+public interface TipoEquipoBiomedicoFactory extends GenerateUniqueId {
 
     default TipoEquipoBiomedico crearTipoEquipoBiomedico(
-            String id, String idEquipoBiomedico, String descripcion, List<String> equipos
+            String idEquipoBiomedico, String descripcion, List<String> equipos
     ) {
         return TipoEquipoBiomedico.builder()
-                .id(id)
+                .id(generateObjectId())
                 .idEquipoBioMedico(idEquipoBiomedico)
                 .descripcion(descripcion)
                 .equipos(equipos)

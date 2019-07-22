@@ -1,4 +1,4 @@
-package co.com.sura.maestros;
+package co.com.sura.salud.sec.maestros;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

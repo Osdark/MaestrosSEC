@@ -1,12 +1,14 @@
-package co.com.sura.salud.sec.maestros.maestros.valoraciones;
+package co.com.sura.salud.sec.maestros.maestros.valoraciones.entity;
 
-public interface ValoracionesFactory {
+import generic.GenerateUniqueId;
+
+public interface ValoracionesFactory extends GenerateUniqueId {
 
     default Valoraciones crearValoraciones(
-            String id, String idValoracion, String nombre, String idTipo
+            String idValoracion, String nombre, String idTipo
     ) {
         return Valoraciones.builder()
-                .id(id)
+                .id(generateObjectId())
                 .idValoracion(idValoracion)
                 .nombre(nombre)
                 .idTipo(idTipo)

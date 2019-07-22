@@ -1,12 +1,14 @@
-package co.com.sura.salud.sec.maestros.maestros.peso;
+package co.com.sura.salud.sec.maestros.maestros.peso.entity;
 
-public interface PesoFactory {
+import generic.GenerateUniqueId;
+
+public interface PesoFactory extends GenerateUniqueId {
 
     default Peso crearPeso(
-            String id, String descripcion
+            String descripcion
     ) {
         return Peso.builder()
-                .id(id)
+                .id(generateObjectId())
                 .descripcion(descripcion)
                 .build();
     }

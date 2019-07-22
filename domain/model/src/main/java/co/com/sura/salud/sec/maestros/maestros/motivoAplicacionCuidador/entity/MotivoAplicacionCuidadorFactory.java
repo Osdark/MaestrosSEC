@@ -1,12 +1,14 @@
-package co.com.sura.salud.sec.maestros.maestros.motivoAplicacionCuidador;
+package co.com.sura.salud.sec.maestros.maestros.motivoAplicacionCuidador.entity;
 
-public interface MotivoAplicacionCuidadorFactory {
+import generic.GenerateUniqueId;
+
+public interface MotivoAplicacionCuidadorFactory extends GenerateUniqueId {
 
     default MotivoAplicacionCuidador crearMotivoAplicacionCuidador(
-            String id, String descripcion
+            String descripcion
     ) {
         return MotivoAplicacionCuidador.builder()
-                .id(id)
+                .id(generateObjectId())
                 .descripcion(descripcion)
                 .build();
     }

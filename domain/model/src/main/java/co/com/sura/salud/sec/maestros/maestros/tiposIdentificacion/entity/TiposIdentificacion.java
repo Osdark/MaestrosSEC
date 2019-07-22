@@ -1,4 +1,4 @@
-package co.com.sura.salud.sec.maestros.maestros.tiposIdentificacion;
+package co.com.sura.salud.sec.maestros.maestros.tiposIdentificacion.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,12 +1,14 @@
-package co.com.sura.salud.sec.maestros.maestros.programa;
+package co.com.sura.salud.sec.maestros.maestros.programa.entity;
 
-public interface ProgramaFactory {
+import generic.GenerateUniqueId;
+
+public interface ProgramaFactory extends GenerateUniqueId {
 
     default Programa crearPrograma(
-            String id, String idPrograma, String nombre, String especialidad, String profesional, boolean citaAutomatica
+            String idPrograma, String nombre, String especialidad, String profesional, boolean citaAutomatica
     ) {
         return Programa.builder()
-                .id(id)
+                .id(generateObjectId())
                 .idPrograma(idPrograma)
                 .nombre(nombre)
                 .especialidad(especialidad)

@@ -1,12 +1,14 @@
-package co.com.sura.salud.sec.maestros.maestros.motivoFijarCita;
+package co.com.sura.salud.sec.maestros.maestros.motivoFijarCita.entity;
 
-public interface MotivoFijarCitaFactory {
+import generic.GenerateUniqueId;
+
+public interface MotivoFijarCitaFactory extends GenerateUniqueId {
 
     default MotivoFijarCita crearMotivoFijarCita(
-            String id, String idMotivo, String descripcion
+            String idMotivo, String descripcion
     ) {
         return MotivoFijarCita.builder()
-                .id(id)
+                .id(generateObjectId())
                 .idMotivo(idMotivo)
                 .descripcion(descripcion)
                 .build();

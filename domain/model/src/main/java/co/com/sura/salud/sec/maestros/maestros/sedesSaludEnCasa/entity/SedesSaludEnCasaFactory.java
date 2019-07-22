@@ -1,12 +1,14 @@
-package co.com.sura.salud.sec.maestros.maestros.sedesSaludEnCasa;
+package co.com.sura.salud.sec.maestros.maestros.sedesSaludEnCasa.entity;
 
-public interface SedesSaludEnCasaFactory {
+import generic.GenerateUniqueId;
+
+public interface SedesSaludEnCasaFactory extends GenerateUniqueId {
 
     default SedesSaludEnCasa crearSedesSaludEnCasa(
-            String id, String idCiudad, String descripcion, String ubicacion
+            String idCiudad, String descripcion, String ubicacion
     ) {
         return SedesSaludEnCasa.builder()
-                .id(id)
+                .id(generateObjectId())
                 .idCiudad(idCiudad)
                 .descripcion(descripcion)
                 .ubicacion(ubicacion)

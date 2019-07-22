@@ -1,4 +1,4 @@
-package co.com.sura.salud.sec.maestros.maestros.profesional;
+package co.com.sura.salud.sec.maestros.maestros.profesional.entity;
 
 import co.com.sura.salud.sec.maestros.maestros.citasProfesional.entity.CitasProfesional;
 import lombok.AllArgsConstructor;

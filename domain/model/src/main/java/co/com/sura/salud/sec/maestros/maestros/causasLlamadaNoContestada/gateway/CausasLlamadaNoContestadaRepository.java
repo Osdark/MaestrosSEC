@@ -4,11 +4,11 @@ import co.com.sura.salud.sec.maestros.maestros.causasLlamadaNoContestada.entity.
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-public interface CausasLlamadaNoContestadaGateway {
+public interface CausasLlamadaNoContestadaRepository {
 
-    Mono<CausasLlamadaNoContestada> crearCausasLlamadaNoContestada();
+    Mono<CausasLlamadaNoContestada> crearCausasLlamadaNoContestada(CausasLlamadaNoContestada causasLlamadaNoContestada);
 
     Flux<CausasLlamadaNoContestada> consultarCausasLlamadaNoContestada();
 
-    Mono<CausasLlamadaNoContestada> editaCausasLlamadaNoContestada();
+    Mono<Void> eliminarCausasLlamadaNoContestada(String id);
 }

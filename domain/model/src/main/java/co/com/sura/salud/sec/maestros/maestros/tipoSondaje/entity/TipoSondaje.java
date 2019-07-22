@@ -1,4 +1,4 @@
-package co.com.sura.salud.sec.maestros.maestros.tipoSondaje;
+package co.com.sura.salud.sec.maestros.maestros.tipoSondaje.entity;
 
 import co.com.sura.salud.sec.maestros.maestros.listaSondaje.entity.ListaSondaje;
 import lombok.AllArgsConstructor;

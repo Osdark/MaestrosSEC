@@ -1,12 +1,14 @@
-package co.com.sura.salud.sec.maestros.maestros.ciudad;
+package co.com.sura.salud.sec.maestros.maestros.ciudad.entity;
 
-public interface CiudadFactory {
+import generic.GenerateUniqueId;
+
+public interface CiudadFactory extends GenerateUniqueId {
 
     default Ciudad crearCiudad(
-            String id, String idCiudad, String nombre, String codigoDANE, String codigoIPS
+            String idCiudad, String nombre, String codigoDANE, String codigoIPS
     ) {
         return Ciudad.builder()
-                .id(id)
+                .id(generateObjectId())
                 .idCiudad(idCiudad)
                 .nombre(nombre)
                 .codigoDANE(codigoDANE)

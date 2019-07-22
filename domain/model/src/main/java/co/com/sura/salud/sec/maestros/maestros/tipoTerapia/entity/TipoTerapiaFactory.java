@@ -1,12 +1,14 @@
-package co.com.sura.salud.sec.maestros.maestros.tipoTerapia;
+package co.com.sura.salud.sec.maestros.maestros.tipoTerapia.entity;
 
-public interface TipoTerapiaFactory {
+import generic.GenerateUniqueId;
+
+public interface TipoTerapiaFactory extends GenerateUniqueId {
 
     default TipoTerapia crearTipoTerapia(
-            String id, String idTipoTerapia, String descripcion
+            String idTipoTerapia, String descripcion
     ) {
         return TipoTerapia.builder()
-                .id(id)
+                .id(generateObjectId())
                 .idTipoTerapia(idTipoTerapia)
                 .descripcion(descripcion)
                 .build();

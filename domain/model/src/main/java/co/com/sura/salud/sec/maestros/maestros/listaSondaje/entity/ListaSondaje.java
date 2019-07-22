@@ -1,4 +1,4 @@
-package co.com.sura.salud.sec.maestros.maestros.listaSondaje;
+package co.com.sura.salud.sec.maestros.maestros.listaSondaje.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder(toBuilder = true)
 public class ListaSondaje {
+    private String id;
     private String idTipoSondaje;
     private String descripcion;
 }

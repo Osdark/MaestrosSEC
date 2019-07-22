@@ -1,4 +1,4 @@
-package co.com.sura.salud.sec.maestros.maestros.motivoFijarCita;
+package co.com.sura.salud.sec.maestros.maestros.motivoFijarCita.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

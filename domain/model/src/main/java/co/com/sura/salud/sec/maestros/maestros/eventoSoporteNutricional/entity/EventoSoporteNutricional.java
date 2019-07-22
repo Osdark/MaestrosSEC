@@ -1,7 +1,7 @@
-package co.com.sura.salud.sec.maestros.maestros.eventoSoporteNutricional;
+package co.com.sura.salud.sec.maestros.maestros.eventoSoporteNutricional.entity;
 
-import co.com.sura.salud.sec.maestros.maestros.frecuencia.Frecuencia;
-import co.com.sura.salud.sec.maestros.maestros.tipoSoporteNutricional.TipoSoporteNutricional;
+import co.com.sura.salud.sec.maestros.maestros.frecuencia.entity.Frecuencia;
+import co.com.sura.salud.sec.maestros.maestros.tipoSoporteNutricional.entity.TipoSoporteNutricional;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;

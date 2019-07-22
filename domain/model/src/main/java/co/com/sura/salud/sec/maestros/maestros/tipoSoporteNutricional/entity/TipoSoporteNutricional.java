@@ -1,4 +1,4 @@
-package co.com.sura.salud.sec.maestros.maestros.tipoSoporteNutricional;
+package co.com.sura.salud.sec.maestros.maestros.tipoSoporteNutricional.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder(toBuilder = true)
 public class TipoSoporteNutricional {
+    private String id;
     private String idTipo;
     private String descripcion;
 }

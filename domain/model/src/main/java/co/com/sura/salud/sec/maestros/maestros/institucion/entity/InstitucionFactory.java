@@ -1,12 +1,14 @@
-package co.com.sura.salud.sec.maestros.maestros.institucion;
+package co.com.sura.salud.sec.maestros.maestros.institucion.entity;
 
-public interface InstitucionFactory {
+import generic.GenerateUniqueId;
+
+public interface InstitucionFactory extends GenerateUniqueId {
 
     default Institucion crearInstitucion(
-            String id, String idInstitucion, String idCiudad, String nombre
+            String idInstitucion, String idCiudad, String nombre
     ) {
         return Institucion.builder()
-                .id(id)
+                .id(generateObjectId())
                 .idInstitucion(idInstitucion)
                 .idCiudad(idCiudad)
                 .nombre(nombre)
